@@ -22,13 +22,13 @@ TrackedObject.location = (0,0,0)
 TrackedObject.keyframe_insert(data_path="location", frame=0)
 TrackedObject.keyframe_insert(data_path="rotation_euler", frame=0)
 
-#create a new camera that will be out primary camera used for rendering
+#create a new camera that will be our primary camera used for rendering
 camera = bpy.data.cameras.new(name='NewCamera')
 NewCamera = bpy.data.objects.new('NewCamera', camera)
 bpy.context.scene.collection.objects.link(NewCamera)
 
 
-#parent the new offset camera to the tracked object
+#parent the new offset camera "NewCamera" to the tracked object
 NewCamera.location.x = 0
 NewCamera.location.y = 0.0381 #meters is 1.5 inches     #the tracker is 1.5 inches behind the camera sensor, so I will be putting the camera 1.5 inches in front the tracked point.      
 NewCamera.location.z = 0.06096 #meters is 2.4  inches   #the tracker is 2.4 inches above the camera sensor, so I will be putting the camera 2.4 inches below the tracked point.
