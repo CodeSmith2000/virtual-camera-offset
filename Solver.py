@@ -83,10 +83,10 @@ Main.rotation_euler.z = 0
 #The tracker sits 4 3/8" above the ground when the camera is sitting down
 Main.location.z = 0.111125 #meters equals 4 3/8"
 
-#Make original tracked camera invisible
+#Make original tracked camera invisible since we no longer need it
 TrackedObject.hide_set(True)
 
-#camera settings - You can select the camera settings to be auto applied.
+#camera settings - You can select the camera settings to be auto applied to "NewCamera".
 #This is for a BMPCC4K
 #camera.lens = 24#mm
 #camera.sensor_fit = "HORIZONTAL"
